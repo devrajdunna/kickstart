@@ -49,10 +49,23 @@
   </br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <button  > <a href="DDR">Login</a></button>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button  > <a href='services1'>Login</a></button>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <button type="button" class="cancelbtn"><a href="index">Cancel </a></button>
     <span class="psw"> <a href="index">Forgot password?</a></span>
   </div>
+
+
+<% if user_signed_in? %>
+    Logged in as
+    <strong><%= current_user.email %></strong>.
+    <%= link_to 'Edit profile', edit_user_registration_path  %></br>
+    <%= link_to "Logout", destroy_user_session_path, method: :delete%>
+    <% else %>
+    <%= link_to "Sign up", new_user_registration_path %>
+    <%= link_to "Login", new_user_session_path %>
+<% end %>
+
+
 </form>
 </nav>
 </body>

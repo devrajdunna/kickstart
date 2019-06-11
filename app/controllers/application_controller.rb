@@ -9,7 +9,11 @@ def services
 end
 def services1
 end
+def services2
+end
 def signup
 end
 def menubar
+end
+def login
 end end

@@ -1,3 +1,4 @@
 class AboutController < ApplicationController
 def services1
-end end
+def services2
+end end end
