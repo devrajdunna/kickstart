@@ -46,8 +46,8 @@
           </li>
           
 <% if user_signed_in? %>
-    Logged in as
-    <strong><%= current_user.email %></strong>.
+   <font color ='yellow'>Logged in as &nbsp;&nbsp;
+    <strong><%= current_user.email %></strong></font>
     <%= link_to 'Edit profile', edit_user_registration_path  %></br>
     <%= link_to "Logout", destroy_user_session_path, method: :delete%>
     <% else %>
