@@ -1,6 +1,21 @@
-<h2>Log in</h2>
 
+<style type="text/css">
+  .background {
+    background-image: url("assets/officedesk.jpeg");
+    background-size: cover;
+  }
+</style>
+<body class="background">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+
+<h2>Log in</h2>
+</div>
+</nav>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -21,6 +36,6 @@
   <div class="actions">
     <%= f.submit "Log in" %>
   </div>
+  <%= render "devise/shared/links" %>
 <% end %>
-
-<%= render "devise/shared/links" %>
+</body>
